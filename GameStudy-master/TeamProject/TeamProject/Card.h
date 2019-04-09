@@ -6,7 +6,7 @@ using namespace std;
 class Card
 {
 	string m_pattern;					//클로버 다이아 스페이드 하트
-	int m_cardNum;
+	string m_cardNum;
 	PlayerInfo* _playerInfo;
 
 public:

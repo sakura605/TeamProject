@@ -6,35 +6,34 @@ Card::~Card()
 }
 
 string m_Cdpt[5] = { "♣", "◆", "♠", "♥", "조커" };
+string m_CdNum[15] = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "ACE", "J", "Q", "K", "Black", "Color" };
 void Card::SettingCard(vector<Card*>* a_Cardlist)	//사빈님
 {
-	int num = 0;
-	int _CardNum = 1;
-
+	int _Joker = 13;
+	int _CardNum = 0;
 	for (int i = 0; i < 54; i++)
 	{
 		Card* _SetCard = new Card();
 		if (i / 13 == 0)
 			_SetCard->m_pattern = m_Cdpt[0];
-
 		else if (i / 13 == 1)
 			_SetCard->m_pattern = m_Cdpt[1];
-
 		else if (i / 13 == 2)
 			_SetCard->m_pattern = m_Cdpt[2];
-
 		else if (i / 13 == 3)
 			_SetCard->m_pattern = m_Cdpt[3];
-		else
+
+		_CardNum = i % 13;
+		_SetCard->m_cardNum = m_CdNum[_CardNum];
+
+		if (i / 13 == 4)
+		{
 			_SetCard->m_pattern = m_Cdpt[4];
-
-		_SetCard->m_cardNum = _CardNum;
-		_CardNum++;
-		if (13 < _CardNum)
-			_CardNum = 1;
-
+			_SetCard->m_cardNum = m_CdNum[_Joker];
+			_Joker++;
+		}
 		a_Cardlist->push_back(_SetCard);
-		printf("%s %d\n", _SetCard->m_pattern.c_str(), _SetCard->m_cardNum);	//출력 테스트용
+		printf("%s %s\n", (*a_Cardlist)[i]->m_pattern.c_str(), (*a_Cardlist)[i]->m_cardNum.c_str());//출력 테스트용
 	}
 }
 
