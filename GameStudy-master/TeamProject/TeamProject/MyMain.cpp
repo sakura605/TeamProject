@@ -13,10 +13,6 @@
 //			 3. 플레이어 리스트/보유 카드목록 출력한다.
 //			 4. 카드를 이용해서 점수를 더하고 등수를 출력한다.
 
-//<<<<<<< HEAD
-
-// 깃허브 마스터함ddddde
-//asdsdsdsd
 
 
 void main()
@@ -26,7 +22,7 @@ void main()
 	map<int, PlayerInfo*> m_playerInfo;
 	vector<Card*> v_card;
 
-	_playerInfo->LoadFile(&m_playerInfo);		//파일 불러오기
+	_playerInfo->LoadFile(&m_playerInfo);		
 
 	while (1)
 	{
