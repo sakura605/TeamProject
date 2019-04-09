@@ -17,7 +17,7 @@
 
 void main()
 {
-	PlayerInfo* _playerInfo = new PlayerInfo;
+	PlayerInfo* _playerInfo = new PlayerInfo;//tyhtytyt
 	Card* _card = new Card;
 	map<int, PlayerInfo*> m_playerInfo;
 	vector<Card*> v_card;
