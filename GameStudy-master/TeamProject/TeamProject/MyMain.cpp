@@ -16,12 +16,29 @@
 
 void main()
 {
-	PlayerInfo* _playerInfo = new PlayerInfo;//tyhtytyt
+	PlayerInfo* _playerInfo = new PlayerInfo;
 	Card* _card = new Card;
 	map<int, PlayerInfo*> m_playerInfo;
 	vector<Card*> v_card;
 
-	_playerInfo->LoadFile(&m_playerInfo);		
+	_playerInfo->LoadFile(&m_playerInfo);
+
+	// 출력 확인
+	/*PlayerInfo* _pplayerInfo1 = new PlayerInfo();
+	_pplayerInfo1->User_ID = "가";
+	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(0, _pplayerInfo1));
+
+	PlayerInfo* _pplayerInfo2 = new PlayerInfo();
+	_pplayerInfo2->User_ID = "나";
+	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(1, _pplayerInfo2));
+
+	PlayerInfo* _pplayerInfo3 = new PlayerInfo();
+	_pplayerInfo3->User_ID = "다";
+	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(2, _pplayerInfo3));
+
+	PlayerInfo* _pplayerInfo4 = new PlayerInfo();
+	_pplayerInfo4->User_ID = "라";
+	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(3, _pplayerInfo4));*/
 
 	while (1)
 	{

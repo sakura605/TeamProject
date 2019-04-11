@@ -37,11 +37,11 @@ void Card::SettingCard(vector<Card*>* a_Cardlist)	//사빈님
 			_SetCard->m_cardNum = m_CdNum[_Joker];
 			_Joker++;
 		}
-		_SetCard->m_pnCard = _SetCard->m_pattern + _SetCard->m_cardNum; // 추가
+		_SetCard->m_pnCard = _SetCard->m_pattern + _SetCard->m_cardNum; // 섞기, 전달 위해 추가
 		a_Cardlist->push_back(_SetCard);
 	}
 
-	//for (int i = 0; i < 54; i++) // 정의, 출력 부분 나누기
+	//for (int i = 0; i < 54; i++)
 	//{
 	//	// printf("%s %s\n", (*a_Cardlist)[i]->m_pattern.c_str(), (*a_Cardlist)[i]->m_cardNum.c_str());//출력 테스트용
 	//	printf("%s\n", (*a_Cardlist)[i]->m_pnCard.c_str()); // 출력 테스트 변경
@@ -68,6 +68,27 @@ void Card::SortingCard(vector<Card*>* a_Cardlist, map<int, PlayerInfo*>* a_Playe
 	//for (int i = 0; i < 54; i++) // 출력 테스트
 	//{
 	//	printf("%s\n", (*a_Cardlist)[i]->m_pnCard.c_str());
+	//}
+
+	map<int, PlayerInfo*>::iterator iter;
+
+	for (int i = 0; i < 52; i++)
+	{
+		iter = a_PlayerInfo->begin();
+
+		if (i % 4 == 1)
+			advance(iter, 1);
+		else if (i % 4 == 2)
+			advance(iter, 2);
+		else if (i % 4 == 3)
+			advance(iter, 3);
+
+		(*a_Cardlist)[i]->_playerInfo = (*iter).second;
+	}
+
+	//for (int i = 0; i < 54; i++) // 출력 테스트
+	//{
+	//	printf("%s %s\n", (*a_Cardlist)[i]->m_pnCard.c_str(), (*a_Cardlist)[i]->_playerInfo->User_ID.c_str());
 	//}
 }
 

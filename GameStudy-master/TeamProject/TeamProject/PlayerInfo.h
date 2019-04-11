@@ -5,6 +5,7 @@ using namespace std;
 
 class PlayerInfo
 {
+//public: // 출력 확인차 잠시 public
 	string User_ID;	//유저아이디
 	string User_PW;	//유저비밀번호
 

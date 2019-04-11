@@ -8,7 +8,7 @@ class Card
 {
 	string m_pattern;					//클로버 다이아 스페이드 하트
 	string m_cardNum;
-	string m_pnCard;					
+	string m_pnCard;					// 패턴 + 숫자
 	PlayerInfo* _playerInfo;
 
 public:
