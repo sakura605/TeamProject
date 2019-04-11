@@ -8,7 +8,7 @@ Card::Card()
 Card::~Card()
 {
 }
-
+//tytytyty
 
 void Card::SettingCard(vector<Card*>* a_Cardlist)	//ป็บ๓ดิ
 {
