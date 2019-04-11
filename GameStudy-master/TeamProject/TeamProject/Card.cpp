@@ -9,6 +9,9 @@ Card::~Card()
 
 string m_Cdpt[5] = { "¢À", "¡ß", "¢¼", "¢¾", "Á¶Ä¿" };
 string m_CdNum[15] = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "ACE", "J", "Q", "K", "Black", "Color" };
+
+//tytytyty
+
 void Card::SettingCard(vector<Card*>* a_Cardlist)	//»çºó´Ô
 {
 	int _Joker = 13;
