@@ -14,7 +14,6 @@
 //			 4. 카드를 이용해서 점수를 더하고 등수를 출력한다.
 
 
-
 void main()
 {
 	PlayerInfo* _playerInfo = new PlayerInfo;//tyhtytyt
@@ -47,6 +46,12 @@ void main()
 
 		else if (a_Sel == 3)					//4명 로그인 시켜야 선택 가능
 		{
+			if (m_playerInfo.size() < 4)
+			{
+				puts("플레이어가 4명이 아닙니다!");
+				continue;
+			}
+
 			_card->SettingCard(&v_card);						//3번 사빈님 - 카드셋팅
 			_card->SortingCard(&v_card, &m_playerInfo);			//4번 동범님 - 카드셔플
 			_card->ShowPlayerlist(&v_card, &m_playerInfo);		//5번 태형님 - 플레이어 리스트 출력
