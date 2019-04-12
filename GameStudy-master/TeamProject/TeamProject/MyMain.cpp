@@ -23,22 +23,22 @@ void main()
 
 	_playerInfo->LoadFile(&m_playerInfo);
 
-	// 출력 확인
-	/*PlayerInfo* _pplayerInfo1 = new PlayerInfo();
-	_pplayerInfo1->User_ID = "가";
-	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(0, _pplayerInfo1));
+	//출력 테스트용!
+	//PlayerInfo* _pplayerInfo1 = new PlayerInfo();
+	//_pplayerInfo1->User_ID = "가";
+	//m_playerInfo.insert(map<int, PlayerInfo*>::value_type(0, _pplayerInfo1));
 
-	PlayerInfo* _pplayerInfo2 = new PlayerInfo();
-	_pplayerInfo2->User_ID = "나";
-	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(1, _pplayerInfo2));
+	//PlayerInfo* _pplayerInfo2 = new PlayerInfo();
+	//_pplayerInfo2->User_ID = "나";
+	//m_playerInfo.insert(map<int, PlayerInfo*>::value_type(1, _pplayerInfo2));
 
-	PlayerInfo* _pplayerInfo3 = new PlayerInfo();
-	_pplayerInfo3->User_ID = "다";
-	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(2, _pplayerInfo3));
+	//PlayerInfo* _pplayerInfo3 = new PlayerInfo();
+	//_pplayerInfo3->User_ID = "다";
+	//m_playerInfo.insert(map<int, PlayerInfo*>::value_type(2, _pplayerInfo3));
 
-	PlayerInfo* _pplayerInfo4 = new PlayerInfo();
-	_pplayerInfo4->User_ID = "라";
-	m_playerInfo.insert(map<int, PlayerInfo*>::value_type(3, _pplayerInfo4));*/
+	//PlayerInfo* _pplayerInfo4 = new PlayerInfo();
+	//_pplayerInfo4->User_ID = "라";
+	//m_playerInfo.insert(map<int, PlayerInfo*>::value_type(3, _pplayerInfo4));
 
 	while (1)
 	{
@@ -61,7 +61,7 @@ void main()
 			system("cls");
 		}
 
-		else if (a_Sel == 3)					//4명 로그인 시켜야 선택 가능
+		if (a_Sel == 3)					//4명 로그인 시켜야 선택 가능
 		{
 			if (m_playerInfo.size() < 4)
 			{

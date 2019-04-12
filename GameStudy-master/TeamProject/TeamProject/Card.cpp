@@ -1,6 +1,6 @@
 #include "Card.h"
 
-#define SUFFLE	1000
+#define SUFFLE	1
 
 
 Card::~Card()
@@ -65,10 +65,10 @@ void Card::SortingCard(vector<Card*>* a_Cardlist, map<int, PlayerInfo*>* a_Playe
 		(*a_Cardlist)[r]->m_pnCard = temp;
 	}
 
-	//for (int i = 0; i < 54; i++) // 출력 테스트
-	//{
-	//	printf("%s\n", (*a_Cardlist)[i]->m_pnCard.c_str());
-	//}
+	for (int i = 0; i < 54; i++) // 출력 테스트
+	{
+		printf("%s\n", (*a_Cardlist)[i]->m_pnCard.c_str());
+	}
 
 	map<int, PlayerInfo*>::iterator iter;
 
@@ -98,6 +98,21 @@ void Card::ShowPlayerlist(vector<Card*>* a_Cardlist, map<int, PlayerInfo*>* a_Pl
 	//  <보유 카드 목록>
 	//		 ：
 	//		 ：
+	map<int, PlayerInfo*>::iterator iter;
+
+	for (iter = (*a_PlayerInfo).begin(); iter != (*a_PlayerInfo).end(); iter++)
+	{
+		int a = 13;
+		printf("<%d번 플레이어(%s)>\n", (*iter).first, (*iter).second->User_ID.c_str());
+
+		for (int ii = a-13; ii < a; ii++)
+		{
+			printf("<%s>\n", (*a_Cardlist)[ii]->m_pnCard.c_str());
+		}
+
+		a + 13;
+	}
+
 }
 
 void Card::RankedPlayer(vector<Card*>* a_Cardlist, map<int, PlayerInfo*>* a_PlayerInfo)	//효섭님
