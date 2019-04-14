@@ -16,7 +16,7 @@ PlayerInfo::~PlayerInfo()
 }
 
 
-void PlayerInfo::AddPlayer(map<int, PlayerInfo*>* a_PlayerInfo)    //±Ë≈ ¥‘aa
+void PlayerInfo::AddPlayer(map<int, PlayerInfo*>* a_PlayerInfo)    //±Ë≈ ¥‘ ≥¢ø¢
 {
 	std::map<int, PlayerInfo*> m_PlayerInfo;
 
