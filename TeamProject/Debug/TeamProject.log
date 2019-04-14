@@ -1,0 +1,17 @@
+﻿  PlayerInfo.cpp
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(29): warning C4474: 'scanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\태빵이\teamproject\teamproject\playerinfo.cpp(29): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(45): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(83): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(182): warning C4477: 'fscanf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'const _Elem *'입니다.
+          with
+          [
+              _Elem=char
+          ]
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(182): warning C4477: 'fscanf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'const _Elem *'입니다.
+          with
+          [
+              _Elem=char
+          ]
+d:\태빵이\teamproject\teamproject\playerinfo.cpp(217): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  TeamProject.vcxproj -> D:\태빵이\TeamProject\Debug\TeamProject.exe
